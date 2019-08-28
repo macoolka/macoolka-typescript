@@ -6,6 +6,4 @@ search_enabled: true
 # Aux links for the upper right navigation
 aux_links:
   'macoolka-typescript on GitHub':
-    - '//github.com/macoolka/macoolka-typescript'
-    
-
+    - 'https://github.com/macoolka/macoolka-typescript'

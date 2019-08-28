@@ -1,65 +1,65 @@
 ---
-title: index.ts
-nav_order: 1
-parent: Modules
+title:index.ts
+nav_order:2
+parent:模块
 ---
 
-# Overview
+# 概述
 
 Common Type
 
 ---
 
-<h2 class="text-delta">Table of contents</h2>
+<h2 class="text-delta">目录</h2>
 
-- [Endomorphism (interface)](#endomorphism-interface)
-- [FunctionN (interface)](#functionn-interface)
-- [Lazy (interface)](#lazy-interface)
-- [NonEmptyArray (interface)](#nonemptyarray-interface)
-- [Predicate (interface)](#predicate-interface)
-- [Refinement (interface)](#refinement-interface)
-- [AnyTuple (type alias)](#anytuple-type-alias)
-- [AtLeastOne (type alias)](#atleastone-type-alias)
-- [DeepReadonly (type alias)](#deepreadonly-type-alias)
-- [Diff (type alias)](#diff-type-alias)
-- [Equals (type alias)](#equals-type-alias)
-- [Exact (type alias)](#exact-type-alias)
-- [KeysOfNotType (type alias)](#keysofnottype-type-alias)
-- [KeysOfType (type alias)](#keysoftype-type-alias)
-- [Maybe (type alias)](#maybe-type-alias)
-- [OptionalKeys (type alias)](#optionalkeys-type-alias)
-- [Overwrite (type alias)](#overwrite-type-alias)
-- [PredicateWithIndex (type alias)](#predicatewithindex-type-alias)
-- [PredicateWithOptionIndex (type alias)](#predicatewithoptionindex-type-alias)
-- [RefinementWithIndex (type alias)](#refinementwithindex-type-alias)
-- [RefinementWithOptionIndex (type alias)](#refinementwithoptionindex-type-alias)
-- [RequiredKeys (type alias)](#requiredkeys-type-alias)
-- [RowLacks (type alias)](#rowlacks-type-alias)
-- [TaggedUnionMember (type alias)](#taggedunionmember-type-alias)
+- [Endomorphism (接口)](#endomorphism-%E6%8E%A5%E5%8F%A3)
+- [FunctionN (接口)](#functionn-%E6%8E%A5%E5%8F%A3)
+- [Lazy (接口)](#lazy-%E6%8E%A5%E5%8F%A3)
+- [NonEmptyArray (接口)](#nonemptyarray-%E6%8E%A5%E5%8F%A3)
+- [Predicate (接口)](#predicate-%E6%8E%A5%E5%8F%A3)
+- [Refinement (接口)](#refinement-%E6%8E%A5%E5%8F%A3)
+- [AnyTuple (类型)](#anytuple-%E7%B1%BB%E5%9E%8B)
+- [AtLeastOne (类型)](#atleastone-%E7%B1%BB%E5%9E%8B)
+- [DeepReadonly (类型)](#deepreadonly-%E7%B1%BB%E5%9E%8B)
+- [Diff (类型)](#diff-%E7%B1%BB%E5%9E%8B)
+- [Equals (类型)](#equals-%E7%B1%BB%E5%9E%8B)
+- [Exact (类型)](#exact-%E7%B1%BB%E5%9E%8B)
+- [KeysOfNotType (类型)](#keysofnottype-%E7%B1%BB%E5%9E%8B)
+- [KeysOfType (类型)](#keysoftype-%E7%B1%BB%E5%9E%8B)
+- [Maybe (类型)](#maybe-%E7%B1%BB%E5%9E%8B)
+- [OptionalKeys (类型)](#optionalkeys-%E7%B1%BB%E5%9E%8B)
+- [Overwrite (类型)](#overwrite-%E7%B1%BB%E5%9E%8B)
+- [PredicateWithIndex (类型)](#predicatewithindex-%E7%B1%BB%E5%9E%8B)
+- [PredicateWithOptionIndex (类型)](#predicatewithoptionindex-%E7%B1%BB%E5%9E%8B)
+- [RefinementWithIndex (类型)](#refinementwithindex-%E7%B1%BB%E5%9E%8B)
+- [RefinementWithOptionIndex (类型)](#refinementwithoptionindex-%E7%B1%BB%E5%9E%8B)
+- [RequiredKeys (类型)](#requiredkeys-%E7%B1%BB%E5%9E%8B)
+- [RowLacks (类型)](#rowlacks-%E7%B1%BB%E5%9E%8B)
+- [TaggedUnionMember (类型)](#taggedunionmember-%E7%B1%BB%E5%9E%8B)
 
 ---
 
-# Endomorphism (interface)
+# Endomorphism (接口)
 
-Type Endomorphism
+形变
 
-**Signature**
+**签名**
 
 ```ts
 interface Endomorphism {}
 ```
 
-Added in v0.2.0
+v0.2.0 中添加
 
-# FunctionN (interface)
+# FunctionN (接口)
 
-**Signature**
+**签名**
 
 ```ts
 interface FunctionN {}
 ```
 
-**Example**
+**示例**
 
 ```ts
 import { FunctionN } from 'macoolka-typescript'
@@ -67,25 +67,25 @@ import { FunctionN } from 'macoolka-typescript'
 export const sum: FunctionN<[number, number], number> = (a, b) => a + b
 ```
 
-Added in v0.2.0
+v0.2.0 中添加
 
-# Lazy (interface)
+# Lazy (接口)
 
-A _thunk_
+延迟的对象
 
-**Signature**
+**签名**
 
 ```ts
 interface Lazy {}
 ```
 
-Added in v0.2.0
+v0.2.0 中添加
 
-# NonEmptyArray (interface)
+# NonEmptyArray (接口)
 
-Array least have a element
+非空数组
 
-**Signature**
+**签名**
 
 ```ts
 interface NonEmptyArray extends Array, Array, Array, Array, Array, Array {
@@ -93,7 +93,7 @@ interface NonEmptyArray extends Array, Array, Array, Array, Array, Array {
 }
 ```
 
-**Example**
+**示例**
 
 ```ts
 import { NonEmptyArray } from 'macoolka-typescript'
@@ -104,41 +104,41 @@ const result1: Result = [{ b: 1 }] //correct
 const result3: Result = [] //error
 ```
 
-Added in v0.2.0
+v0.2.0 中添加
 
-# Predicate (interface)
+# Predicate (接口)
 
-Predicate a type
+断言
 
-**Signature**
+**签名**
 
 ```ts
 interface Predicate {}
 ```
 
-Added in v0.2.0
+v0.2.0 中添加
 
-# Refinement (interface)
+# Refinement (接口)
 
-Define a Type A is B
+断言类型 A 是 B
 
-**Signature**
+**签名**
 
 ```ts
 interface Refinement {}
 ```
 
-Added in v0.2.0
+v0.2.0 中添加
 
-# AnyTuple (type alias)
+# AnyTuple (类型)
 
-**Signature**
+**签名**
 
 ```ts
 export type AnyTuple = Array<any> & { '0': any }
 ```
 
-**Example**
+**示例**
 
 ```ts
 import { AnyTuple } from 'macoolka-typescript'
@@ -154,19 +154,19 @@ f(z)
 // f([1, 2, 3])
 ```
 
-Added in v0.2.0
+v0.2.0 中添加
 
-# AtLeastOne (type alias)
+# AtLeastOne (类型)
 
-Type least have a propery
+约束类型至少有一个属性
 
-**Signature**
+**签名**
 
 ```ts
 export type AtLeastOne<T, U = { [K in keyof T]: Pick<T, K> }> = Partial<T> & U[keyof U]
 ```
 
-**Example**
+**示例**
 
 ```ts
 import { AtLeastOne } from 'macoolka-typescript'
@@ -179,19 +179,19 @@ const result2: Result = { a: '', b: 1 } //correct
 const result3: Result = {} //error
 ```
 
-Added in v0.2.0
+v0.2.0 中添加
 
-# DeepReadonly (type alias)
+# DeepReadonly (类型)
 
-Set all memeber is readonly.
+设置所有的成员为`readonly`
 
-**Signature**
+**签名**
 
 ```ts
 export type DeepReadonly<A> = A extends Array<infer B> ? DeepReadonlyArray<B> : DeepReadonlyObject<A>
 ```
 
-**Example**
+**示例**
 
 ```ts
 import { DeepReadonly } from 'macoolka-typescript'
@@ -209,13 +209,13 @@ export declare const x: ReadonlyFoo
 // x.bar.quux[1].barbaz = 1
 ```
 
-Added in v0.2.0
+v0.2.0 中添加
 
-# Diff (type alias)
+# Diff (类型)
 
-Define some property is `Partial`
+定义一些属性为`Partial`
 
-**Signature**
+**签名**
 
 ```ts
 export type Diff<A extends object, OK extends keyof A> = Compact<
@@ -223,7 +223,7 @@ export type Diff<A extends object, OK extends keyof A> = Compact<
 >
 ```
 
-**Example**
+**示例**
 
 ```ts
 import { Diff } from 'macoolka-typescript'
@@ -231,13 +231,13 @@ import { Diff } from 'macoolka-typescript'
 export type Result = Diff<{ a: string; b: number }, 'b'> // { a: string; b?: number }
 ```
 
-Added in v0.2.0
+v0.2.0 中添加
 
-# Equals (type alias)
+# Equals (类型)
 
-Returns the string literal 'T' if `A` and `B` are equal types, 'F' otherwise
+判断两个类型是否相等
 
-**Signature**
+**签名**
 
 ```ts
 export type Equals<A, B> = (<C>() => C extends Compact<A> ? 'T' : 'F') extends (<C>() => C extends Compact<B>
@@ -247,7 +247,7 @@ export type Equals<A, B> = (<C>() => C extends Compact<A> ? 'T' : 'F') extends (
   : 'F'
 ```
 
-**Example**
+**示例**
 
 ```ts
 import { Equals } from 'macoolka-typescript'
@@ -256,19 +256,19 @@ export type Result1 = Equals<string, string> // "T"
 export type Result2 = Equals<string, number> // "F"
 ```
 
-Added in v0.2.0
+v0.2.0 中添加
 
-# Exact (type alias)
+# Exact (类型)
 
-Exclude a type all members
+排除一个类型的所有成员
 
-**Signature**
+**签名**
 
 ```ts
 export type Exact<A extends object, B extends A> = A & Record<Exclude<keyof B, keyof A>, never>
 ```
 
-**Example**
+**示例**
 
 ```ts
 import { Exact } from 'macoolka-typescript'
@@ -279,19 +279,19 @@ f({ a: 'a' })
 // f({ a: 'a', b: 1 })
 ```
 
-Added in v0.2.0
+v0.2.0 中添加
 
-# KeysOfNotType (type alias)
+# KeysOfNotType (类型)
 
-Picks only the keys of a non certain type
+获取非特定类型的`key`
 
-**Signature**
+**签名**
 
 ```ts
 export type KeysOfNotType<A extends object, B> = { [K in keyof A]-?: A[K] extends B ? never : K }[keyof A]
 ```
 
-**Example**
+**示例**
 
 ```ts
 import { KeysOfType } from 'macoolka-typescript'
@@ -299,19 +299,19 @@ import { KeysOfType } from 'macoolka-typescript'
 export type Result = KeysOfNotType<{ a: string; b: string | boolean; c: boolean; d: string }, string> // "b" | "c"
 ```
 
-Added in v0.2.0
+v0.2.0 中添加
 
-# KeysOfType (type alias)
+# KeysOfType (类型)
 
-Picks only the keys of a certain type
+获取特定类型的`key`
 
-**Signature**
+**签名**
 
 ```ts
 export type KeysOfType<A extends object, B> = { [K in keyof A]-?: A[K] extends B ? K : never }[keyof A]
 ```
 
-**Example**
+**示例**
 
 ```ts
 import { KeysOfType } from 'macoolka-typescript'
@@ -319,25 +319,25 @@ import { KeysOfType } from 'macoolka-typescript'
 export type Result = KeysOfType<{ a: string; b: string | boolean; c: boolean; d: string }, string> // "a" | "d"
 ```
 
-Added in v0.2.0
+v0.2.0 中添加
 
-# Maybe (type alias)
+# Maybe (类型)
 
-Type may be null or undefined
+类型可以为空
 
-**Signature**
+**签名**
 
 ```ts
 export type Maybe<T> = null | undefined | T
 ```
 
-Added in v0.2.0
+v0.2.0 中添加
 
-# OptionalKeys (type alias)
+# OptionalKeys (类型)
 
-Extracts optional keys as a literal type union
+得到可选的`key`
 
-**Signature**
+**签名**
 
 ```ts
 export type OptionalKeys<T> = { [K in keyof T]: T extends Record<K, T[K]> ? never : K } extends {
@@ -349,7 +349,7 @@ export type OptionalKeys<T> = { [K in keyof T]: T extends Record<K, T[K]> ? neve
   : never
 ```
 
-**Example**
+**示例**
 
 ```ts
 import { OptionalKeys } from 'macoolka-typescript'
@@ -358,19 +358,19 @@ type A = { a: string; b: number; x?: string; y?: number }
 export type Result = OptionalKeys<A> // "x" | "y"
 ```
 
-Added in v0.2.0
+v0.2.0 中添加
 
-# Overwrite (type alias)
+# Overwrite (类型)
 
-Overwrite a type with anther type
+用一个类型覆盖另一个类型
 
-**Signature**
+**签名**
 
 ```ts
 export type Overwrite<A extends object, B extends object> = Compact<{ [K in Exclude<keyof A, keyof B>]: A[K] } & B>
 ```
 
-**Example**
+**示例**
 
 ```ts
 import { Overwrite } from 'macoolka-typescript'
@@ -378,61 +378,61 @@ import { Overwrite } from 'macoolka-typescript'
 export type Result = Overwrite<{ a: string; b: number }, { b: boolean }> // { a: string; b: boolean }
 ```
 
-Added in v0.2.0
+v0.2.0 中添加
 
-# PredicateWithIndex (type alias)
+# PredicateWithIndex (类型)
 
-Predicate a IndexType A is B
+断言一个索引类型
 
-**Signature**
+**签名**
 
 ```ts
 export type PredicateWithIndex<I, A> = (i: I, a: A) => boolean
 ```
 
-Added in v0.2.0
+v0.2.0 中添加
 
-# PredicateWithOptionIndex (type alias)
+# PredicateWithOptionIndex (类型)
 
-Predicate a OptionIndexType A is B
+断言一个可选索引类型
 
-**Signature**
+**签名**
 
 ```ts
 export type PredicateWithOptionIndex<I, A> = (a: A, i?: I) => boolean
 ```
 
-Added in v0.2.0
+v0.2.0 中添加
 
-# RefinementWithIndex (type alias)
+# RefinementWithIndex (类型)
 
-Define a IndexType A is B
+断言一个索引类型 A 是 B
 
-**Signature**
+**签名**
 
 ```ts
 export type RefinementWithIndex<I, A, B extends A> = (i: I, a: A) => a is B
 ```
 
-Added in v0.2.0
+v0.2.0 中添加
 
-# RefinementWithOptionIndex (type alias)
+# RefinementWithOptionIndex (类型)
 
-Define a OptionIndexType A is B
+断言一个可选索引类型 A 是 B
 
-**Signature**
+**签名**
 
 ```ts
 export type RefinementWithOptionIndex<I, A, B extends A> = (a: A, i?: I) => a is B
 ```
 
-Added in v0.2.0
+v0.2.0 中添加
 
-# RequiredKeys (type alias)
+# RequiredKeys (类型)
 
-Extracts required keys as a literal type union
+得到必填的`key`
 
-**Signature**
+**签名**
 
 ```ts
 export type RequiredKeys<T> = { [K in keyof T]: {} extends Pick<T, K> ? never : K } extends { [_ in keyof T]: infer U }
@@ -442,7 +442,7 @@ export type RequiredKeys<T> = { [K in keyof T]: {} extends Pick<T, K> ? never : 
   : never
 ```
 
-**Example**
+**示例**
 
 ```ts
 import { RequiredKeys } from 'macoolka-typescript'
@@ -451,19 +451,19 @@ type A = { a: string; b: number; x?: string; y?: number }
 export type Result = RequiredKeys<A> // "a" | "b"
 ```
 
-Added in v0.2.0
+v0.2.0 中添加
 
-# RowLacks (type alias)
+# RowLacks (类型)
 
-Encodes the constraint that a given object `A` does not contain specific keys `K`
+约束不包括指定的`key`
 
-**Signature**
+**签名**
 
 ```ts
 export type RowLacks<A extends object, K extends string | number | symbol> = A & Record<Extract<keyof A, K>, never>
 ```
 
-**Example**
+**示例**
 
 ```ts
 import { RowLacks } from 'macoolka-typescript'
@@ -475,13 +475,13 @@ declare function g(x: RowLacks<{ a: string; b: number }, 'c'>): void
 g({ a: 'a', b: 1 }) // ok
 ```
 
-Added in v0.2.0
+v0.2.0 中添加
 
-# TaggedUnionMember (type alias)
+# TaggedUnionMember (类型)
 
-Extracts the type of a member of a tagged union
+获取特定的类型通过标记
 
-**Signature**
+**签名**
 
 ```ts
 export type TaggedUnionMember<A extends object, Tag extends keyof A, Value extends A[Tag]> = Extract<
@@ -490,7 +490,7 @@ export type TaggedUnionMember<A extends object, Tag extends keyof A, Value exten
 >
 ```
 
-**Example**
+**示例**
 
 ```ts
 import { TaggedUnionMember } from 'macoolka-typescript'
@@ -501,4 +501,4 @@ type C = A | B
 export type Result = TaggedUnionMember<C, 'tag', 'A'> // A
 ```
 
-Added in v0.2.0
+v0.2.0 中添加
