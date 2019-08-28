@@ -1,0 +1,56 @@
+{
+  "name": "macoolka-typescript",
+  "version": "0.2.1",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "author": "fastspeeed@gmail.com",
+  "scripts": {
+    "reinstall": "rm -rf node_modules/ && yarn install",
+    "clean": "rm -rf lib/ coverage/ ",
+    "lint": "tslint -p tsconfig.json",
+    "lint:fix": "tslint -p tsconfig.json --fix",
+    "test": "jest",
+    "build": "rm -rf lib/ && tsc ",
+    "precommit": "npm run lint",
+    "prepush": "npm run test",
+    "coverage": "rimraf coverage && jest --config jest.config.json --coverage"
+  },
+  "dependencies": {
+   
+  },
+  "devDependencies": {  
+    "ts-node": "^8.0.2",
+    "tslint": "5.11.0",
+    "tslint-config-standard": "8.0.1",
+    "typescript": "^3.5.2",
+    "@types/jest": "^23.3.5",
+    "@types/node": "^10.12.0",
+    "jest": "^24.8.0",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^24.0.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(./src/*|\\.(test|spec))\\.(ts|tsx)$"
+  },
+  "homepage": "https://github.com/macoolka/macoolka-typescript",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/macoolka/macoolka-typescript.git"
+  },
+  "keywords": [
+    "macoolka",
+    "typescript"
+  ],
+  "license": "MIT"
+}
