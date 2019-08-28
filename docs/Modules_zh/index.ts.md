@@ -1,7 +1,7 @@
 ---
-title:index.ts
-nav_order:2
-parent:模块
+title: index.ts
+nav_order: 2
+parent: 模块
 ---
 
 # 概述
