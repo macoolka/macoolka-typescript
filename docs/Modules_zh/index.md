@@ -1,7 +1,7 @@
 ---
 title:模块
-nav_order:2
+nav_order:3
 has_children:true
-permalink:/docs/模块
+permalink:/docs/Modules_zh
 ---
 
