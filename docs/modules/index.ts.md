@@ -1,5 +1,5 @@
 ---
-title: home/fastspeeed/macoolka/macoolka-typescript/src/index.ts
+title: index.ts
 nav_order: 1
 parent: Modules
 ---
