@@ -39,7 +39,7 @@ npm install macoolka-typescript
 # Documentation
 
 - [Docs](https://macoolka.github.io/macoolka-typescript)
-- [API Reference](https://macoolka.github.io/macoolka-typescript/docs/modules)
+- [API Reference](https://macoolka.github.io/macoolka-typescript/docs/Modules)
 - [API Reference (中文)](https://macoolka.github.io/macoolka-typescript/docs/模块)
 
 
