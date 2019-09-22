@@ -1,6 +1,6 @@
 {
   "name": "macoolka-typescript",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -18,9 +18,7 @@
     "prepush": "npm run test",
     "coverage": "rimraf coverage && jest --config jest.config.json --coverage"
   },
-  "dependencies": {
-   
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/jest": "^24.0.18",
     "@types/node": "^12.7.2",
