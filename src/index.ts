@@ -349,3 +349,12 @@ export type RefinementWithOptionIndex<I, A, B extends A> = (a: A, i?: I) => a is
  * @since 0.2.0
  */
 export type PredicateWithOptionIndex<I, A> = (a: A, i?: I) => boolean
+/**
+ * Deep Partial A Record
+ * @desczh
+ * 把所有的属性全部可选
+ * @since 0.2.2
+ */
+export type PartialAll<T> = {
+    [P in keyof T]?: Partial<T[P]>;
+};
